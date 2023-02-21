@@ -36,3 +36,15 @@ def createPipe():
         {'x': pipeX, 'y': y2} 
     ]
     return pipe
+
+if __name__ == "__main__":
+
+    pygame.init()
+    framepersecond_clock = pygame.time.Clock()
+
+    pygame.display.set_caption('Flappy Bird')
+
+    game_images['flappybird'] = pygame.image.load(birdplayer_image).convert_alpha()
+    game_images['sea_level'] = pygame.image.load(seavel_image).convert_alpha()
+    game_images['background'] = pygame.image.load(background_image).convert_alpha()
+    game_images['pipeimage'] = (pygame.transform.rotate(pygame.image.load(pipeimage).convert_alpha(), 180), pygame.image.load(pipeimage).convert_alpha())
